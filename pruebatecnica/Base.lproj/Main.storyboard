@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ejd-K3-lug">
+    <device id="retina5_9" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="vdp-E9-EzE">
+            <objects>
+                <navigationController id="ejd-K3-lug" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zr7-GL-JNp">
+                        <rect key="frame" x="0.0" y="47" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="fr4-vy-XBW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WKM-Aw-BbT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1480" y="-50"/>
+        </scene>
+        <!--Exercise Dispatch View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ExerciseDispatchViewController" customModule="pruebatecnica" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EFz-JK-64H">
+                                <rect key="frame" x="0.0" y="91" width="375" height="687"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="UD3-i2-xHI">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVt-Gk-r6n" userLabel="Button - CollectionView">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="Lx3-wG-hM8"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Ejercicio 1: Collection View"/>
+                                                <connections>
+                                                    <action selector="onCollectionViewExerciseWithButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8QU-gI-vbo"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4jQ-BE-Bdm" userLabel="Button - Servicios de Datos">
+                                                <rect key="frame" x="0.0" y="56" width="375" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="yHC-Jd-Bwh"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Ejercicio 2: Servicios de Datos"/>
+                                                <connections>
+                                                    <action selector="onDataServicesExerciseWithButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="93u-Gw-M5K"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="UD3-i2-xHI" firstAttribute="bottom" secondItem="zY2-SB-cF6" secondAttribute="bottom" id="0xD-zb-Dgc"/>
+                                    <constraint firstItem="UD3-i2-xHI" firstAttribute="trailing" secondItem="zY2-SB-cF6" secondAttribute="trailing" id="5N5-Qt-mZV"/>
+                                    <constraint firstItem="UD3-i2-xHI" firstAttribute="top" secondItem="zY2-SB-cF6" secondAttribute="top" id="6tW-v9-yt6"/>
+                                    <constraint firstItem="UD3-i2-xHI" firstAttribute="width" secondItem="Xlo-j8-Glr" secondAttribute="width" id="KuT-eY-rVF"/>
+                                    <constraint firstItem="UD3-i2-xHI" firstAttribute="leading" secondItem="zY2-SB-cF6" secondAttribute="leading" id="Z7Z-kL-C1n"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="zY2-SB-cF6"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Xlo-j8-Glr"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EFz-JK-64H" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8Dc-Eu-Rhz"/>
+                            <constraint firstItem="EFz-JK-64H" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="aMB-uf-H0z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EFz-JK-64H" secondAttribute="bottom" id="jwI-sL-CtK"/>
+                            <constraint firstItem="EFz-JK-64H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nUw-Jy-uWs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="mVx-2a-kCR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-537" y="-50"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
